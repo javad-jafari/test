@@ -1,0 +1,10 @@
+.vscode
+vscode
+venv
+media
+db.sqlite3
+asset
+static
+.idea
+__pycache__
+migrations
