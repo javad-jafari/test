@@ -6,8 +6,6 @@ import requests
 import time
 from binance.client import Client
 
-headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36'}
-
 
 api_key = "jd6ZVf62EOYKdUaNDwPfCSB9ndH303ePzBGeSJxgfEzvIMzBEtKahXw7eFnV55EG"
 secret_key = "dQWwP1oMJe1vuopXF4mykLyk9ZKeUQWXM1ORiuFyYPbSD45bxdvfRkMjuIBXKJft"
@@ -20,13 +18,13 @@ def get_currency(request):
     response = ''
     while response == '':
         try:
-            response = requests.get(url, params=dict(symbol=symbol), headers=headers)
+            response = requests.get(url, params=dict(symbol=symbol), verify=False)
             break
         except:
             print("Connection refused by the server..")
-            print("Let me sleep for 5 seconds")
+            print("Let me sleep for 8 seconds")
             print("ZZzzzz...")
-            time.sleep(5)
+            time.sleep(8)
             print("Was a nice sleep, now let me continue...")
             continue
 
@@ -40,7 +38,7 @@ def get_currency_detail(request,coin):
     response = ''
     while response == '':
         try:
-            response = requests.get(url, params=dict(symbol=coin), headers=headers)
+            response = requests.get(url, params=dict(symbol=coin))
             break
         except:
             print("Connection refused by the server..")
