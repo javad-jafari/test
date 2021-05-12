@@ -1,14 +1,8 @@
-# test
+# country detail
 
-### i've used both of request and python-binance but  request package work correctly for me .
+### in this project , used outer api to get data
 
-#### for BTCUSDT couple coin you just use this address : http://127.0.0.1:8000/ (root)
-#### for getting couple coin by url you should use this address :http://127.0.0.1:8000/api/BTCUSDT
-##### result example :
-```
-{
-  "symbol": "BTCUSDT",
-  "price": "4.00000200"
-}
-```
+#### all countries sorted by alphabet are displayed : http://127.0.0.1:8000/ (root)
+#### country detail  :http://127.0.0.1:8000/countries/name/{country_name}
+
 
